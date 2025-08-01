@@ -5,12 +5,12 @@ const submimtbtn=document.getElementById("btn")
 submimtbtn.addEventListener('click', () => {
  	const input1=parseInt(document.getElementById("age").value);
 const input2=document.getElementById("name").value.trim();	
-					
-	let promis=new Promise((resolve,reject) => {
-	if(isNaN(input1) || input2== ""){
-		reject("Please enter valid details.")
+			if(isNaN(input1) || input2== ""){
+		alert("Please enter valid details.")
 		return;
-	}
+	}		
+	let promis=new Promise((resolve,reject) => {
+	
 		setTimeout(() => {
 		if( input1>=18){
 		resolve(input2)
