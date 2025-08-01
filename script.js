@@ -27,8 +27,9 @@ const input2=document.getElementById("name").value.trim();
   }).catch(function (own) {
 	 if (own === "Please enter valid details.") {
       alert(own);
+	 }
 		 else{
     alert(`Oh sorry, ${own}. You aren't old enough.`);
 	 }
 });
-})
+});
