@@ -1,35 +1,35 @@
+<input type="text" id="name" placeholder="Enter your name">
+<input type="number" id="age" placeholder="Enter your age">
+<button id="btn">Submit</button>
 
+<script>
+const submitBtn = document.getElementById("btn");
 
+submitBtn.addEventListener('click', () => {
+  const ageInput = document.getElementById("age").value;
+  const nameInput = document.getElementById("name").value;
 
-const submimtbtn=document.getElementById("btn")
-submimtbtn.addEventListener('click', () => {
- 	const input1=parseInt(document.getElementById("age").value);
-const input2=document.getElementById("name").value.trim();	
-			if(isNaN(input1) || input2== ""){
-		alert("Please enter valid details.")
-		return;
-	}		
-	let promis=new Promise((resolve,reject) => {
-	
-		setTimeout(() => {
-		if( input1>=18){
-		resolve(input2)
-		}
-		else{
-			reject(input2)
-		}
-	
-	}, 4000)	
-	
-});
- promis.then(function (userName) {
+  if (nameInput.trim() === "" || ageInput.trim() === "") {
+    alert("Please fill in both name and age!");
+    return;
+  }
+
+  const age = parseInt(ageInput);
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (age >= 18) {
+        resolve(nameInput);
+      } else {
+        reject(nameInput);
+      }
+    }, 4000);
+  });
+
+  promise.then((userName) => {
     alert(`Welcome, ${userName}. You can vote.`);
-  }).catch(function (own) {
-	 if (own === "Please enter valid details.") {
-      alert(own);
-	 }
-		 else{
-    alert(`Oh sorry, ${own}. You aren't old enough.`);
-	 }
+  }).catch((userName) => {
+    alert(`Oh sorry ${userName}. You aren't old enough.`);
+  });
 });
-});
+</script>
