@@ -2,16 +2,16 @@
 
 
 const submimtbtn=document.getElementById("btn")
-submimtbtn.addEventListener('click', ()=> {
+submimtbtn.addEventListener('click', () => {
  	const input1=parseInt(document.getElementById("age").value);
 const input2=document.getElementById("name").value.trim();	
 					
-	let promis=new Promise((resolve,reject)=> {
+	let promis=new Promise((resolve,reject) => {
 	if(isNaN(input1) || input2== ""){
 		reject("Please enter valid details.")
 		return;
 	}
-		setTimeout(()=> {
+		setTimeout(() => {
 		if( input1>=18){
 		resolve(input2)
 		}
@@ -20,7 +20,7 @@ const input2=document.getElementById("name").value.trim();
 		}
 	
 	}, 4000)	
-	});
+	
 });
  promis.then(function (userName) {
     alert(`Welcome, ${userName}. You can vote.`);
