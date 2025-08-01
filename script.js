@@ -1,4 +1,4 @@
-const form = document.getElementById("votingForm");
+const form = document.getElementById("btn");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // prevent page reload
