@@ -1,6 +1,6 @@
 const form = document.getElementById("btn");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("click", (event) => {
   event.preventDefault(); // prevent page reload
 
   const name = document.getElementById("name").value.trim();
