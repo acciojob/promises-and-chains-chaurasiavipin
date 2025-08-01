@@ -25,7 +25,10 @@ const input2=document.getElementById("name").value.trim();
  promis.then(function (userName) {
     alert(`Welcome, ${userName}. You can vote.`);
   }).catch(function (own) {
+	 if (own === "Please enter valid details.") {
+      alert(own);
+		 else{
     alert(`Oh sorry, ${own}. You aren't old enough.`);
- 
+	 }
 });
 })
