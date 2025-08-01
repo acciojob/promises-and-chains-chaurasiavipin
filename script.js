@@ -10,6 +10,7 @@ const input2=document.getElementById("name").value.trim();
 	if(isNaN(input1) || input2== ""){
 		reject("Please enter valid details.")
 		return;
+	}
 		setTimeout(()=> {
 		if( input1>=18){
 		resolve(input2)
@@ -19,8 +20,8 @@ const input2=document.getElementById("name").value.trim();
 		}
 	
 	}, 4000)	
-	
-})
+	});
+});
  promis.then(function (userName) {
     alert(`Welcome, ${userName}. You can vote.`);
   }).catch(function (own) {
