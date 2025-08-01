@@ -15,15 +15,15 @@ const input2=document.getElementById("name").value;
 		resolve(input1)
 		}
 		else{
-			reject(input1)
+			reject(input2)
 		}
 		
 	}, 4000)	
 })
  promis.then(function (userName) {
     alert(`Welcome, ${userName}. You can vote.`);
-  }).catch(function (userName) {
-    alert(`Oh sorry ${userName}. You aren't old enough.`);
+  }).catch(function (own) {
+    alert(`Oh sorry, ${own}. You aren't old enough.`);
  
 });
 })
