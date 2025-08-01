@@ -4,13 +4,13 @@
 const submimtbtn=document.getElementById("btn")
  
 
-submimtbtn.addEventListener('click', ()=>{
+submimtbtn.addEventListener('click', ()=> {
 							
 	const input1=parseInt(document.getElementById("age").value);
 const input2=document.getElementById("name").value;						
 	let promis=new Promise((resolve,reject)=> {
 	
-	setTimeout(()=>{
+	setTimeout(()=> {
 		if(input1 !="" && input1>=18){
 		resolve(input1)
 		}
@@ -24,6 +24,6 @@ const input2=document.getElementById("name").value;
     alert(`Welcome, ${userName}. You can vote.`);
   }).catch(function (userName) {
     alert(`Oh sorry ${userName}. You aren't old enough.`);
-  });
+ 
 });
 })
